@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <button class="btn primary" id="newChatBtn">+ New Chat</button>
+      <input class="search" id="searchInput" type="search" placeholder="Search chats..." />
+      <div class="sidebar-title">Chat history</div>
+      <ul class="chat-list" id="chatList"></ul>
+      <div class="sidebar-foot">
+        <button class="btn small" id="settingsBtn">Backend URL</button>
+        <button class="btn small" id="themeBtn">Theme</button>
+      </div>
+    </aside>
+    <div class="backdrop" id="backdrop"></div>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="btn icon" id="menuBtn" aria-label="Menu">☰</button>
+        <div class="topbar-title" id="chatTitle">New chat</div>
+        <span class="status" id="status" title="Backend status"><i></i><b id="statusText">checking</b></span>
+        <button class="btn small" id="exportBtn">Export</button>
+        <button class="btn small" id="clearBtn">Clear chat</button>
+      </header>
+
+      <section class="messages" id="messages"></section>
+
+      <footer class="composer">
+        <textarea id="input" rows="1" placeholder="Message likho... (Enter = send, Shift+Enter = new line)"></textarea>
+        <button class="btn primary" id="sendBtn">Send</button>
+        <button class="btn danger hidden" id="stopBtn">Stop</button>
+      </footer>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
